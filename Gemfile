@@ -13,9 +13,10 @@ gem 'figaro'
 gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
-gem "rack-timeout"
+gem 'rack-timeout'
 gem "friendly_id", "~> 5.0.3"
-gem "wicked_pdf"
+gem 'wicked_pdf'
+gem 'time_difference'
 
 group :development do
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
