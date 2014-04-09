@@ -11,10 +11,10 @@ class HomeController < ApplicationController
     human_birthday = Time.new(1988, 3, 30)
     dog_birthday = Time.new(2010, 11, 23)
 
-    human_age = TimeDifference.between(stuart_birthday, Time.now()).in_days
-    dog_age = TimeDifference.between(huxley_birthday, Time.now()).in_days 
+    human_age = TimeDifference.between(human_birthday, Time.now()).in_days
+    dog_age = TimeDifference.between(dog_birthday, Time.now()).in_days 
 
-    h_counter = stuart_age - huxley_age
+    h_counter = human_age - dog_age
     d_counter = 0
 
     while d_counter <= h_counter do
@@ -40,10 +40,10 @@ class HomeController < ApplicationController
     human_birthday = Time.new(1988, 3, 30)
     dog_birthday = Time.new(2010, 11, 23)
 
-    human_age = TimeDifference.between(stuart_birthday, Time.now()).in_days
-    dog_age = TimeDifference.between(huxley_birthday, Time.now()).in_days 
+    human_age = TimeDifference.between(human_birthday, Time.now()).in_days
+    dog_age = TimeDifference.between(dog_birthday, Time.now()).in_days 
 
-    h_counter = stuart_age - huxley_age
+    h_counter = human_age - dog_age
     d_counter = 0
 
     while d_counter <= h_counter do
@@ -69,10 +69,10 @@ class HomeController < ApplicationController
     human_birthday = Time.new(1988, 3, 30)
     dog_birthday = Time.new(2010, 11, 23)
 
-    human_age = TimeDifference.between(stuart_birthday, Time.now()).in_days
-    dog_age = TimeDifference.between(huxley_birthday, Time.now()).in_days 
+    human_age = TimeDifference.between(human_birthday, Time.now()).in_days
+    dog_age = TimeDifference.between(dog_birthday, Time.now()).in_days 
 
-    h_counter = stuart_age - huxley_age
+    h_counter = human_age - dog_age
     d_counter = 0
 
     while d_counter <= h_counter do
