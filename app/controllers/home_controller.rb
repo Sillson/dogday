@@ -1,6 +1,13 @@
 class HomeController < ApplicationController
 
   def index
+    if params[:small_medium_breed]
+      redirect_to small_breed_path
+    if params[:large_breed]
+      redirect_to large_breed_path
+    if params[:xlarge_breed]
+      redirect_to large_breed_path
+    end
   end
 
   def about_us
