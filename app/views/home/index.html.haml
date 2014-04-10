@@ -1,4 +1,27 @@
-.container
-  .row
-    %h1
-      DogDay
+.col-md-6
+  .container-calc
+    .row
+      %h1
+        DogDay
+
+    .row
+      = form_tag url_for(:controller => 'home') do
+        .row
+          %h5
+            Human
+          = date_field(:human_birthday, "Human's Birthday")
+        .row
+          %h5
+            Dog
+          = date_field(:dog_birthday, "Dog's Birthday")
+        .row
+          = radio_button_tag(:small_medium_breed, "Small Dog")
+          %p Small to Medium Breeds
+        .row
+          = radio_button_tag(:large_breed, "Large Dog")
+          %p Large Breeds
+        .row
+          = radio_button_tag(:xlarge_breed, "XLarge Dog")
+          %p XL Breeds
+    
+      = submit_tag "submit"    
