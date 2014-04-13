@@ -1,4 +1,8 @@
-.col-md-6
+.container-arrow
+  %span.left
+  %span.right
+
+.col-md-12
   .container-calc
     .row
       %h1
@@ -7,21 +11,23 @@
     .row
       = form_tag url_for(:controller => 'home', :action => 'index'), :method => 'get', :remote => true do
         .row
-          %h5
-            Human
-          = date_field('human', :human_birthday)
-        .row
-          %h5
-            Dog
-          = date_field(:dog_birthday, "Dog's Birthday")
-        .row
-          = radio_button_tag(:breed, "small_medium_breed")
-          %p Small to Medium Breeds
-        .row
-          = radio_button_tag(:breed, "large_breed")
-          %p Large Breeds
-        .row
-          = radio_button_tag(:breed, "xlarge_breed")
-          %p XL Breeds
-    
-        = submit_tag "Calculate My Dog Day!"    
+          .col-md-7
+            %h5
+              Human
+            .row
+            = date_field('human', :human_birthday)
+          .col-md-5
+            %h5
+              Dog
+            = date_field(:dog_birthday, "Dog's Birthday")
+            .row
+              = radio_button_tag(:breed, "small_medium_breed")
+              %p Small to Medium Breeds
+            .row
+              = radio_button_tag(:breed, "large_breed")
+              %p Large Breeds
+            .row
+              = radio_button_tag(:breed, "xlarge_breed")
+              %p XL Breeds
+      
+            = submit_tag "Calculate My Dog Day!"    

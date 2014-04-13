@@ -38,9 +38,9 @@ class HomeController < ApplicationController
       end
     end
 
-    dog_day = human_birthday + (h_counter * (60*60*24) )
+    @dog_day = human_birthday + (h_counter * (60*60*24) )
 
-    puts dog_day.strftime("%A %b %d %Y")
+    puts @dog_day.strftime("%A %b %d %Y")
 
     respond_to do |format|
       format.js
@@ -71,9 +71,9 @@ class HomeController < ApplicationController
       end
     end
 
-    dog_day = human_birthday + (h_counter * (60*60*24) )
+    @dog_day = human_birthday + (h_counter * (60*60*24) )
 
-    puts dog_day.strftime("%A %b %d %Y")
+    puts @dog_day.strftime("%A %b %d %Y")
 
     respond_to do |format|
       format.js
@@ -104,9 +104,9 @@ class HomeController < ApplicationController
       end
     end
 
-    dog_day = human_birthday + (h_counter * (60*60*24) )
+    @dog_day = human_birthday + (h_counter * (60*60*24) )
 
-    puts dog_day.strftime("%A %b %d %Y")
+    puts @dog_day.strftime("%A %b %d %Y")
 
     respond_to do |format|
       format.js
