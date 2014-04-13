@@ -1,33 +1,40 @@
-.container-arrow
-  %span.left
-  %span.right
-
 .col-md-12
   .container-calc
     .row
-      %h1
-        DogDay
+      .container-header
+
+    .container.margin-bottom  
+      .jumbotron
+        %h2
+          How it works
+        %p
+          Enter in your birthday as well as your canine compatriot's, select the breed size, and then find that magical day you and your dog will be, or have been the same age.
+
 
     .row
       = form_tag url_for(:controller => 'home', :action => 'index'), :method => 'get', :remote => true do
         .row
-          .col-md-7
+          .col-md-4
             %h5
-              Human
+              Human's Birthday
             .row
-            = date_field('human', :human_birthday)
-          .col-md-5
+            = date_field('human', :human_birthday, class: "form-control")
+          .col-md-4.col-md-offset-4
             %h5
-              Dog
-            = date_field(:dog_birthday, "Dog's Birthday")
+              Dog's Birthday
             .row
-              = radio_button_tag(:breed, "small_medium_breed")
-              %p Small to Medium Breeds
-            .row
-              = radio_button_tag(:breed, "large_breed")
-              %p Large Breeds
-            .row
-              = radio_button_tag(:breed, "xlarge_breed")
-              %p XL Breeds
-      
-            = submit_tag "Calculate My Dog Day!"    
+            = date_field(:dog_birthday, "Dog's Birthday", class: "form-control")
+            %br
+              .col-md-6
+                .row
+                  = radio_button_tag(:breed, "small_medium_breed")
+                  Small to Medium Breed
+                .row
+                  = radio_button_tag(:breed, "large_breed")
+                  Large Breed
+                .row
+                  = radio_button_tag(:breed, "xlarge_breed")
+                  XL Breed
+          .row
+            %h1   
+              = submit_tag "Calculate My Dog Day!", class: "btn btn-large"    

@@ -2,11 +2,13 @@
 @import "bootstrap";
 
 $bg: #f5dc9a;
-$arrow: #d43723;
-$arrowhover: #8a1a0b;
+
 
 html,body {
-  background: $bg
+  background: url("Fuxston.jpg") no-repeat center center;
+  background-size:cover;
+
+
 }
 
 /* Form */
@@ -14,91 +16,32 @@ html,body {
 .container-calc {
   margin-left: 2em;
 
+  .jumbotron{
+    opacity: 0.7;
+  }
+
   .row {
     margin-bottom: 1em;
   }
 
-  h1 {
-    text-align: center;
+  .container-header{
+
   }
 
   .float-right {
     float:right;
     margin-right:5em;
   }
-}
 
-.container-arrow {
-  width:95%;
-  height:95%;
-  position: relative;
-  margin:20px auto;
-}
+  .margin-bottom{
+    margin-bottom: 5em;
+  }
 
-span {
-  transition: all 0.5s ease;
-  position: absolute;
-  height: 0;
-  width: 0;
-  border: 95px solid transparent;
-  border-radius:2%;
-}
-span:after {
-  transition: all 0.5s ease;
-  background-color: $arrow;
-}
-span:hover:after {
-  background-color: $arrowhover;
+  .form-control{
+    width:75%;
+  }
 }
 
 
-
-/* Right Arrow */
-
-.right {
-  top: 420px;
-  left: 850px;
-  border-left-color: $arrow;
-  -webkit-transform: rotate(35deg);
-  -moz-transform: rotate(35deg);
-  -o-transform: rotate(35deg);
-}
-.right:hover {
-  border-left-color: $arrowhover;
-}
-
-.right:after {
-  content: "";
-  display: block;
-  height: 100px;
-  width: 950px;
-  margin-left: -1000px;
-  margin-top: -50px;
-}
-
-
-
-/* Left Arrow */
-
-.left {
-  top: 420px;
-  right: 850px;
-  border-right-color: $arrow;
-  -webkit-transform: rotate(-35deg);
-  -moz-transform: rotate(-35deg);
-  -o-transform: rotate(-35deg);
-}
-.left:hover {
-  border-right-color: $arrowhover;
-}
-
-.left:after {
-  content: "";
-  display: block;
-  height: 100px;
-  width: 900px;
-  margin-left: 90px;
-  margin-top: -50px;
-}
 
 
