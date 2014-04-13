@@ -1,12 +1,12 @@
 class HomeController < ApplicationController
 
   def index
-    if params[:small_medium_breed]
-      redirect_to small_breed_path
-    elsif params[:large_breed]
+    if params[:breed] == "small_medium_breed"
+      redirect_to small_medium_breed_path
+    elsif params[:breed] == "large_breed"
       redirect_to large_breed_path
-    elsif params[:xlarge_breed]
-      redirect_to large_breed_path
+    elsif params[:breed] == "xlarge_breed"
+      redirect_to xlarge_breed_path
     end
   end
 
@@ -41,6 +41,10 @@ class HomeController < ApplicationController
     dog_day = human_birthday + (h_counter * (60*60*24) )
 
     puts dog_day.strftime("%A %b %d %Y")
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   def large_breed
@@ -70,6 +74,10 @@ class HomeController < ApplicationController
     dog_day = human_birthday + (h_counter * (60*60*24) )
 
     puts dog_day.strftime("%A %b %d %Y")
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   def small_medium_breed
@@ -99,5 +107,9 @@ class HomeController < ApplicationController
     dog_day = human_birthday + (h_counter * (60*60*24) )
 
     puts dog_day.strftime("%A %b %d %Y")
+
+    respond_to do |format|
+      format.js
+    end
   end
 end

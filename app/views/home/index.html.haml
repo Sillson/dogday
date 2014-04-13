@@ -5,7 +5,7 @@
         DogDay
 
     .row
-      = form_tag url_for(:controller => 'home') do
+      = form_tag url_for(:controller => 'home', :action => 'index'), :method => 'get', :remote => true do
         .row
           %h5
             Human
@@ -15,13 +15,13 @@
             Dog
           = date_field(:dog_birthday, "Dog's Birthday")
         .row
-          = radio_button_tag(:small_medium_breed, "Small Dog")
+          = radio_button_tag(:breed, "small_medium_breed")
           %p Small to Medium Breeds
         .row
-          = radio_button_tag(:large_breed, "Large Dog")
+          = radio_button_tag(:breed, "large_breed")
           %p Large Breeds
         .row
-          = radio_button_tag(:xlarge_breed, "XLarge Dog")
+          = radio_button_tag(:breed, "xlarge_breed")
           %p XL Breeds
     
-      = submit_tag "Calculate My Dog Day!"    
+        = submit_tag "Calculate My Dog Day!"    
