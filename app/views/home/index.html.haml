@@ -1,31 +1,22 @@
-.col-md-12
-  .container-calc
+
+.container
+  .col-lg-4
     .row
-      .container-header
-
-    .container.margin-bottom  
-      .jumbotron
-        %h2
-          How it works
-        %p
-          Enter in your birthday as well as your canine compatriot's, select the breed size, and then find that magical day you and your dog will be, or have been the same age.
-
-
-    .row
-      = form_tag url_for(:controller => 'home', :action => 'index'), :method => 'get', :remote => true do
-        .row
-          .col-md-4
+      %h1.margin-left32
+        DogDay
+      .row
+        = form_tag url_for(:controller => 'home', :action => 'index'), :method => 'get', :remote => true do
+          .row
             %h5
               Human's Birthday
             .row
-            = date_field('human', :human_birthday, class: "form-control")
-          .col-md-4.col-md-offset-4
+            = date_field(:human_birthday, "Human's Birthday", class: "form-control")
             %h5
               Dog's Birthday
             .row
             = date_field(:dog_birthday, "Dog's Birthday", class: "form-control")
             %br
-              .col-md-6
+              .container
                 .row
                   = radio_button_tag(:breed, "small_medium_breed")
                   Small to Medium Breed
@@ -35,6 +26,12 @@
                 .row
                   = radio_button_tag(:breed, "xlarge_breed")
                   XL Breed
-          .row
-            %h1   
-              = submit_tag "Calculate My Dog Day!", class: "btn btn-large"    
+                .row
+                  %h1   
+                    = submit_tag "Do Math", class: "btn btn-large"
+
+  .col-lg-8
+    .row   
+      #dogday
+        %h1
+

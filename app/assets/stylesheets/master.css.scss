@@ -1,46 +1,41 @@
 //import bootstrap
 @import "bootstrap";
 
-$bg: #f5dc9a;
+
 
 
 html,body {
-  background: url("Fuxston.jpg") no-repeat center center;
-  background-size:cover;
-
 
 }
 
 /* Form */
 
-.container-calc {
-  margin-left: 2em;
 
-  .jumbotron{
-    opacity: 0.7;
-  }
-
-  .row {
-    margin-bottom: 1em;
-  }
-
-  .container-header{
-
-  }
-
-  .float-right {
-    float:right;
-    margin-right:5em;
-  }
-
-  .margin-bottom{
-    margin-bottom: 5em;
-  }
-
-  .form-control{
-    width:75%;
-  }
+.jumbotron{
+   opacity: 0.7;
 }
+
+.row {
+  margin-bottom: 5px;
+}
+
+.float-right {
+  float:right;
+  margin-right:5em;
+}
+
+.margin-bottom{
+  margin-bottom: 5em;
+}
+
+.form-control{
+  width:75%;
+}
+
+.margin-left32{
+  margin-left: -32px;
+}
+
 
 
 

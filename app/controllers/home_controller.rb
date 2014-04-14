@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
 
+  before_filter :set_shared_variables
+
   def index
     if params[:breed] == "small_medium_breed"
       redirect_to small_medium_breed_path
@@ -15,8 +17,11 @@ class HomeController < ApplicationController
 
 
   def xlarge_breed
-    human_birthday = Time.new(1988, 3, 30)
-    dog_birthday = Time.new(2010, 11, 23)
+    @human_birthday = params[@h]
+    @dog_birthday = params[@d]
+
+    human_birthday = Time.new(@human_birthday)
+    dog_birthday = Time.new(@dog_birthday)
 
     human_age = TimeDifference.between(human_birthday, Time.now()).in_days
     dog_age = TimeDifference.between(dog_birthday, Time.now()).in_days 
@@ -111,5 +116,10 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  def set_shared_variables
+    @h = params[:human_birthday]
+    @d = params[:dog_birthday]
   end
 end
