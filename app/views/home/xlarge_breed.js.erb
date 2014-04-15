@@ -1,3 +1,1 @@
-$('#dogday').hide()
-                  .html('<%= escape_javascript(print @dog_day) %>')
-                  .fadeIn("slow");
+$("#dogday").html('<%=escape_javascript(render "dog_day")%>');

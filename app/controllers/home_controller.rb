@@ -46,8 +46,10 @@ class HomeController < ApplicationController
 
     @dog_day = human_birthday + (h_counter * (60*60*24) )
 
-    puts @dog_day.strftime("%A %b %d %Y")
+    @usersees = @dog_day.strftime("%A %b %d %Y")
 
+    puts @usersees
+    
     respond_to do |format|
       format.js
     end
