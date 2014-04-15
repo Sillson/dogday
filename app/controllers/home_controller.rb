@@ -1,8 +1,10 @@
 class HomeController < ApplicationController
 
-  before_filter :set_shared_variables
-
   def index
+    
+    @@human_birthday = "#{params[:human_birthday]}"
+    @@dog_birthday = "#{params[:dog_birthday]}"
+
     if params[:breed] == "small_medium_breed"
       redirect_to small_medium_breed_path
     elsif params[:breed] == "large_breed"
@@ -10,6 +12,7 @@ class HomeController < ApplicationController
     elsif params[:breed] == "xlarge_breed"
       redirect_to xlarge_breed_path
     end
+
   end
 
   def about_us
@@ -17,11 +20,9 @@ class HomeController < ApplicationController
 
 
   def xlarge_breed
-    @human_birthday = params[@h]
-    @dog_birthday = params[@d]
 
-    human_birthday = Time.new(@human_birthday)
-    dog_birthday = Time.new(@dog_birthday)
+    human_birthday = @@human_birthday.to_time
+    dog_birthday = @@dog_birthday.to_time
 
     human_age = TimeDifference.between(human_birthday, Time.now()).in_days
     dog_age = TimeDifference.between(dog_birthday, Time.now()).in_days 
@@ -53,8 +54,9 @@ class HomeController < ApplicationController
   end
 
   def large_breed
-    human_birthday = Time.new(1988, 3, 30)
-    dog_birthday = Time.new(2010, 11, 23)
+    
+    human_birthday = @@human_birthday.to_time
+    dog_birthday = @@dog_birthday.to_time
 
     human_age = TimeDifference.between(human_birthday, Time.now()).in_days
     dog_age = TimeDifference.between(dog_birthday, Time.now()).in_days 
@@ -86,8 +88,8 @@ class HomeController < ApplicationController
   end
 
   def small_medium_breed
-    human_birthday = Time.new(1988, 3, 30)
-    dog_birthday = Time.new(2010, 11, 23)
+    human_birthday = @@human_birthday.to_time
+    dog_birthday = @@dog_birthday.to_time
 
     human_age = TimeDifference.between(human_birthday, Time.now()).in_days
     dog_age = TimeDifference.between(dog_birthday, Time.now()).in_days 
@@ -116,10 +118,5 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.js
     end
-  end
-
-  def set_shared_variables
-    @h = params[:human_birthday]
-    @d = params[:dog_birthday]
   end
 end

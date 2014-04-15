@@ -10,11 +10,11 @@
             %h5
               Human's Birthday
             .row
-            = date_field(:human_birthday, "Human's Birthday", class: "form-control")
+            = date_field_tag(:human_birthday, Date.today, class: "form-control")
             %h5
               Dog's Birthday
             .row
-            = date_field(:dog_birthday, "Dog's Birthday", class: "form-control")
+            = date_field_tag(:dog_birthday, Date.today, class: "form-control")
             %br
               .container
                 .row
