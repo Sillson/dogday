@@ -1,19 +1,19 @@
 .container
-  .col-lg-4
+  .col-lg-5.col-md-6
     .jumbotron
       .row
         %h1
           DogDay
         .row
           = form_tag url_for(:controller => 'home', :action => 'index'), :method => 'get', :remote => true do
-            .row
+            .container
               %h5
                 Human's Birthday
-              .row
+              .row.input-group
               = date_field_tag(:human_birthday, Date.today, class: "form-control")
               %h5
                 Dog's Birthday
-              .row
+              .row.input-group
               = date_field_tag(:dog_birthday, Date.today, class: "form-control")
               %br
                 .container
@@ -34,9 +34,9 @@
                         = link_to "Reset", root_path, class: "btn btn-large"
 
 
-  .col-lg-5.col-md-offset-2
-    .row   
-      #dogday
+.col-lg-5.col-md-offset-2
+  .row   
+    #dogday
 
 
 
