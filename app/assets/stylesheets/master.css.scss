@@ -2,12 +2,19 @@
 @import "bootstrap";
 
 
+$background:#a9a9a9;
+$pooch:#323232;
+$brown: #644437;
+$darkbrown: #493125;
+$ligtbrown: #f8a643;
+$bone: #eee;
+$nose: #111;
 
 
 html,body {
-  background: image-url("huxbg.png") center center fixed;
-  background-size: cover;
-
+  //background: image-url("huxbg.png") center center fixed;
+  //background-size: cover;
+  background: $background;
 
 }
 
@@ -24,13 +31,224 @@ html,body {
     width:50%;
   }
 
-  #dogday{
-    
+/* Output */
 
+.renderdate{
+
+}
+
+/* Dog */  
+
+.dog {
+  width: 0px;
+  position: relative;
+  margin: 50px auto;
+}
+
+.head {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top:2px;
+  border-radius: 45px;
+  background: $pooch;
+  z-index: 2;
+}
+
+.head::before{
+  position:absolute;
+  display:block;
+  background:$background;
+  content:' ';
+  width:95px;
+  height:45px;
+  left:-45px;
+  top:-12px;
+  border-radius:20px;
+  -webkit-transform:rotate(-55deg);
+  transform:rotate(-55deg);
+  -ms-transform:rotate(-55deg);  
+}
+
+.head::after{
+  position:absolute;
+  display:block;
+  background:$background;
+  content:' ';
+  width:105px;
+  height:40px;
+  left:-5px;
+  top:-22px;
+  border-radius:30px;
+  -webkit-transform:rotate(-5deg);
+  transform:rotate(-5deg);
+  -ms-transform:rotate(-5deg);
+}
+
+.nose {
+  position: absolute;
+  top: 50px;
+  left: -40px;
+  background: $pooch;
+  width: 90px;
+  height: 50px;
+  border-radius: 0 0 0 50px;
+  border-bottom:1px solid black;
+  -webkit-transform:rotate(-15deg);
+  transform:rotate(-15deg);
+  -ms-transform:rotate(-15deg);
+}
+
+.nose::after {
+  position: absolute;
+  background: $nose;
+  width: 15px;
+  height: 10px;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  top: 0px;
+  left: 0px;
+}
+
+.ear {
+  background: $pooch;
+  width: 40px;
+  height: 80px;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  border-radius: 0 0 0 40px;
+  border-left: 3px solid $darkbrown;
+}
+
+.body {
+  width: 110px;
+  position: absolute;
+  top: 90px;
+  height: 120px;
+  background: $pooch;
+  left: 20px;
+  border-radius: 0 150px 0 0;
+  z-index: 1;
+}
+
+.body::before {
+  position: absolute;
+  display: block;
+  content: '';
+  background: #3E7C45;
+  width: 50px;
+  height: 20px;
+}
+
+.paw {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background: $pooch;
+  top: 95px;
+  left: -20px;
+  border-radius: 25px 25px 0 0;
+}
+.paw::before {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom:0;
+  left: 20px;
+  height: 70px;
+  width: 20px;
+  background: #fff;
+  z-index: -1;
+  border-radius: 0 20px 0 0 ;
+}
+
+.tail {
+  position: absolute;
+  width: 30px;
+  height: 100px;
+  background: $pooch;
+  top:32px;
+  right: -40px;
+  z-index: 2;
+  border-right:2px solid $brown;
+  border-radius: 0 50px 50px 0 / 0 100px 100px 0;
+  -webkit-transform:rotate(35deg);
+  transform:rotate(35deg);
+  -ms-transform:rotate(35deg);
+}
+
+.bone{
+  background: $bone;
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  top: 60px;
+  left: -200px;
+  -webkit-transform:rotate(45deg);
+  transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  z-index:1;
+}
+
+.left{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: $bone;
+  border-radius: 80px;
+  top: -15px;
+  left:-15px; 
+}
+
+.left::after{
+  display: block;
+  content: '';
+  position:absolute;
+  width:40px;
+  height:40px;
+  background: $bone;
+  border-radius:40px;
+  top: 25px;
+  left: -10px;
+  border-top: 1px solid grey;
+  -webkit-transform:rotate(35deg);
+  transform:rotate(35deg);
+  -ms-transform:rotate(35deg);
+}
+
+.right{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: $bone;
+  border-radius: 80px;
+  top: -15px;
+  left: 95px; 
+}
+
+.right::after{
+  display: block;
+  content: '';
+  position:absolute;
+  width:40px;
+  height:40px;
+  background: $bone;
+  border-radius:40px;
+  top: 25px;
+  left: -10px;
+  border-top: 1px solid grey;
+  -webkit-transform:rotate(35deg);
+  transform:rotate(35deg);
+  -ms-transform:rotate(35deg);
+}
+
+
+@media only screen and (max-width:500px){
+  .dog{
+    display:none;
   }
-
-
-
-
+}
 
 
