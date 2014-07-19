@@ -2,8 +2,9 @@ class HomeController < ApplicationController
 
   def index
     
-    @@human_birthday = "#{params[:human_birthday]}"
-    @@dog_birthday = "#{params[:dog_birthday]}"
+    @@human_birthday = "#{params[:human_birthday]}".to_time
+    @@dog_birthday = "#{params[:dog_birthday]}".to_time
+
 
     if params[:breed] == "small_medium_breed"
       redirect_to small_medium_breed_path
@@ -21,11 +22,8 @@ class HomeController < ApplicationController
 
   def xlarge_breed
 
-    human_birthday = @@human_birthday.to_time
-    dog_birthday = @@dog_birthday.to_time
-
-    human_age = TimeDifference.between(human_birthday, Time.now()).in_days
-    dog_age = TimeDifference.between(dog_birthday, Time.now()).in_days 
+    human_age = TimeDifference.between(@@human_birthday, Time.now()).in_days
+    dog_age = TimeDifference.between(@@dog_birthday, Time.now()).in_days 
 
     h_counter = human_age - dog_age
     d_counter = 0
@@ -44,9 +42,7 @@ class HomeController < ApplicationController
       end
     end
 
-    @dog_day = human_birthday + (h_counter * (60*60*24) )
-
-    @usersees = @dog_day.strftime("%A %b %d %Y")
+    @usersees = (@@human_birthday + (h_counter * (60*60*24) )).strftime("%A %b %d %Y")
 
     puts @usersees
     
@@ -56,12 +52,9 @@ class HomeController < ApplicationController
   end
 
   def large_breed
-    
-    human_birthday = @@human_birthday.to_time
-    dog_birthday = @@dog_birthday.to_time
 
-    human_age = TimeDifference.between(human_birthday, Time.now()).in_days
-    dog_age = TimeDifference.between(dog_birthday, Time.now()).in_days 
+    human_age = TimeDifference.between(@@human_birthday, Time.now()).in_days
+    dog_age = TimeDifference.between(@@dog_birthday, Time.now()).in_days 
 
     h_counter = human_age - dog_age
     d_counter = 0
@@ -80,9 +73,7 @@ class HomeController < ApplicationController
       end
     end
 
-    @dog_day = human_birthday + (h_counter * (60*60*24) )
-
-    @usersees = @dog_day.strftime("%A %b %d %Y")
+    @usersees = (@@human_birthday + (h_counter * (60*60*24) )).strftime("%A %b %d %Y")
 
     puts @usersees
 
@@ -92,11 +83,9 @@ class HomeController < ApplicationController
   end
 
   def small_medium_breed
-    human_birthday = @@human_birthday.to_time
-    dog_birthday = @@dog_birthday.to_time
 
-    human_age = TimeDifference.between(human_birthday, Time.now()).in_days
-    dog_age = TimeDifference.between(dog_birthday, Time.now()).in_days 
+    human_age = TimeDifference.between(@@human_birthday, Time.now()).in_days
+    dog_age = TimeDifference.between(@@dog_birthday, Time.now()).in_days 
 
     h_counter = human_age - dog_age
     d_counter = 0
@@ -115,9 +104,7 @@ class HomeController < ApplicationController
       end
     end
 
-    @dog_day = human_birthday + (h_counter * (60*60*24) )
-
-    @usersees = @dog_day.strftime("%A %b %d %Y")
+    @usersees = (@@human_birthday + (h_counter * (60*60*24) )).strftime("%A %b %d %Y")
 
     puts @usersees
 
