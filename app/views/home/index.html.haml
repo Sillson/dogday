@@ -1,55 +1,48 @@
+.callout
+  .col-lg-12
+    .row
+      %h1
+        
 
 .container
   .col-lg-5.col-md-5
+    = render "dog_form"
+  
+  .col-lg-6.col-md-6.col-lg-offset-1.col-md-offset-1.instructions
     .jumbotron
       .row
-        %h1
-          DogDay
-        .row
-          = form_tag url_for(:controller => 'home', :action => 'index'), :method => 'get', :remote => true do
-            .container
-              %h5
-                Human's Birthday
-              .row.input-group
-              = date_field_tag(:human_birthday, Date.today, class: "form-control")
-              %h5
-                Dog's Birthday
-              .row.input-group
-              = date_field_tag(:dog_birthday, Date.today, class: "form-control")
-              %br
-                .container
-                  .row
-                    = radio_button_tag(:breed, "small_medium_breed")
-                    Small to Medium Breed
-                  .row
-                    = radio_button_tag(:breed, "large_breed")
-                    Large Breed
-                  .row
-                    = radio_button_tag(:breed, "xlarge_breed")
-                    XL Breed
-                  .row
-                    %h1
-                      .col-md-6   
-                        = submit_tag "Do Math", class: "btn btn-large"
-                      .col-md-6
-                        = link_to "Reset", root_path, class: "btn btn-large"
-                  .row
-                    #dogday
+        %h2
+          Instructions:
+        %p
+          Ever wonder when you and your dog will be the same relative age? 
+        %p
+          Find that magical moment that you and your best friend cross paths on your journey through this universe with the power of DogDay! 
+        %p
+          Using the latest in predictive algorithms, quantim mechanics, and telepathy, DogDay's simple to use interface will nail down the day you pass the torch to Fido as your elder. 
+        %p
+          Simply enter in your birthday's, select your dog's breed size, and go fetch!
+.callout
+  .col-lg-12
+    .row
+      %h1
+.row
 
-  .container
-    .col-lg-5.col-md-5.col-lg-offset-1.col-md-offset-1
-      .dog
-        .head
-          .nose
-          .ear
-        .body
-          .paw
-          .tail
-        .bone
-          .left
-          .right
-      .col-lg-12
-        .renderdate
+-##banner
+-#  = render "bstretch"
+-#  .container
+  -#  .col-lg-5.col-md-5.col-lg-offset-1.col-md-offset-1
+  -#    .dog
+  -#      .head
+  -#        .nose
+  -#        .ear
+  -#      .body
+  -#        .paw
+  -#        .tail
+  -#      .bone
+  -#        .left
+  -#        .right
+  -#    .col-lg-12
+  -#      .renderdate
 
 
 

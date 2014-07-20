@@ -18,6 +18,7 @@ gem "friendly_id", "~> 5.0.3"
 gem 'wicked_pdf'
 gem 'time_difference'
 gem 'newrelic_rpm'
+gem 'backstretch-rails'
 
 group :development do
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]

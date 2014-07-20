@@ -18,8 +18,7 @@ class HomeController < ApplicationController
 
   def about_us
   end
-
-
+  
   def xlarge_breed
 
     human_age = TimeDifference.between(@@human_birthday, Time.now()).in_days
