@@ -8,14 +8,13 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'bootstrap-sass', '>= 3.0.0.0'
+gem 'bootstrap-sass', '~> 3.3.3'
 gem 'figaro'
 gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
 gem 'rack-timeout'
 gem "friendly_id", "~> 5.0.3"
-gem 'wicked_pdf'
 gem 'time_difference'
 gem 'newrelic_rpm'
 gem 'backstretch-rails'
@@ -25,7 +24,6 @@ group :development do
   gem 'html2haml'
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'wkhtmltopdf-binary'
 end
 
 group :development, :test do
@@ -36,5 +34,4 @@ end
 group :production do
   gem 'unicorn'
   gem 'rails_12factor'
-  gem "wkhtmltopdf-heroku", :git => 'git://github.com/camdez/wkhtmltopdf-heroku.git'
 end

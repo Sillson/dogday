@@ -10,5 +10,7 @@
  *
  *= require_self
  *= require master
+ *= require firm-css/bootstrap.min.css
+ *= require firm-css/styles.css
  *= require_tree .
  */

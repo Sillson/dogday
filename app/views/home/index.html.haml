@@ -1,48 +1,81 @@
-.callout
-  .col-lg-12
-    .row
-      %h1
-        
+#wrap
+  %header.masthead
+    #myCarousel.carousel.slide
+      .carousel-inner
+        .item.active
+          =image_tag "redwood-bg1.jpg"
+          .container
+            .carousel-caption
+              %h2 A Fundraiser
+              %p Two torn cruciate ligaments. I've got the firt covered, trying to crowd source monies for the second.
+      .logo Huxley's Knees
+  #nav.navbar.navbar-custom.navbar-inverse.navbar-static-top
+    .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      .collapse.navbar-collapse
+        %ul.nav.navbar-nav.nav-justified
+          %li
+            %a{:href => "#section1"} Top
+          %li
+            %a{:href => "#section2"} Backstory
+          %li
+            %a{:href => "#section4"} Dog Day Calculator
+          %li
+            %a{:href => "#section5"} Donate
+          %li
+            %a{:href => "#section5"} Contact
 
-.container
-  .col-lg-5.col-md-5
-    = render "dog_form"
-  
-  .col-lg-6.col-md-6.col-lg-offset-1.col-md-offset-1.instructions
-    .jumbotron
+
+
+
+  .callout
+    .col-lg-12
       .row
-        %h2
-          Instructions:
-        %p
-          Ever wonder when you and your dog will be the same relative age? 
-        %p
-          Find that magical moment that you and your best friend cross paths on your journey through this universe with the power of DogDay! 
-        %p
-          Using the latest in predictive algorithms, quantum mechanics, and telepathy, DogDay's simple to use interface will nail down the day you pass the torch to Fido as your elder. 
-        %p
-          Simply enter in your birthday's, select your dog's breed size, and go fetch!
-.callout
-  .col-lg-12
-    .row
-      %h1
-.row
+        %h1
+          
 
--##banner
--#  = render "bstretch"
--#  .container
-  -#  .col-lg-5.col-md-5.col-lg-offset-1.col-md-offset-1
-  -#    .dog
-  -#      .head
-  -#        .nose
-  -#        .ear
-  -#      .body
-  -#        .paw
-  -#        .tail
-  -#      .bone
-  -#        .left
-  -#        .right
-  -#    .col-lg-12
-  -#      .renderdate
+  .container
+    .col-lg-5.col-md-5
+      = render "dog_form"
+    
+    .col-lg-6.col-md-6.col-lg-offset-1.col-md-offset-1.instructions
+      .jumbotron
+        .row
+          %h2
+            Instructions:
+          %p
+            Ever wonder when you and your dog will be the same relative age? 
+          %p
+            Find that magical moment that you and your best friend cross paths on your journey through this universe with the power of DogDay! 
+          %p
+            Using the latest in predictive algorithms, quantum mechanics, and telepathy, DogDay's simple to use interface will nail down the day you pass the torch to Fido as your elder. 
+          %p
+            Simply enter in your birthday's, select your dog's breed size, and go fetch!
+  .callout
+    .col-lg-12
+      .row
+        %h1
+  .row
+
+
+    .container
+      .col-lg-5.col-md-5.col-lg-offset-1.col-md-offset-1
+        .dog
+          .head
+            .nose
+            .ear
+          .body
+            .paw
+            .tail
+          .bone
+            .left
+            .right
+          .col-lg-12
+            .renderdate
 
 
 
