@@ -31,8 +31,6 @@ GEM
     autoprefixer-rails (5.1.7)
       execjs
       json
-    backstretch-rails (2.0.4)
-      railties (> 3.1)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.3)
@@ -58,6 +56,8 @@ GEM
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     friendly_id (5.0.4)
       activerecord (>= 4.0.0)
     haml (4.1.0.beta.1)
@@ -92,7 +92,6 @@ GEM
     mime-types (1.25.1)
     minitest (5.4.0)
     multi_json (1.10.1)
-    newrelic_rpm (3.9.0.229)
     pg (0.17.1)
     polyglot (0.3.5)
     quiet_assets (1.0.3)
@@ -185,19 +184,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  backstretch-rails
   binding_of_caller
   bootstrap-sass (~> 3.3.3)
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   figaro
+  font-awesome-rails
   friendly_id (~> 5.0.3)
   haml-rails
   html2haml
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
-  newrelic_rpm
   pg
   quiet_assets
   rack-timeout

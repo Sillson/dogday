@@ -13,7 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require firm-js/bootstrap.min.js
-//= require firm-js/scripts.js
-//= require 'jquery.backstretch'
 //= require_tree .

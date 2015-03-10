@@ -1,6 +1,6 @@
 //import bootstrap
-@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 $background:#a9a9a9;
 $pooch:#323232;
@@ -14,10 +14,13 @@ $nose: #111;
 html,body {
   //background: image-url("huxbg.png") center center fixed;
   //background-size: cover;
-  background: $background;
+  // background: $background;
 
 }
 
+.logotext{
+  font-color:#000;
+}
 /* Backstretch */
 #banner{
   min-height: 500px;  
@@ -45,8 +48,6 @@ html,body {
 
 /* Form */
 
-
-  
   .jumbotron{
      opacity: 0.8;
      margin-top:1em;

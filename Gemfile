@@ -16,8 +16,8 @@ gem 'simple_form'
 gem 'rack-timeout'
 gem "friendly_id", "~> 5.0.3"
 gem 'time_difference'
-gem 'newrelic_rpm'
-gem 'backstretch-rails'
+gem 'font-awesome-rails'
+
 
 group :development do
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
