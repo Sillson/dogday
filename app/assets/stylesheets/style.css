@@ -3745,19 +3745,19 @@ body.boxed.img-5 {
 }
 /* CTA Six  */
 .cta-six{
-	background:#fff url("../../img/backgrounds/2.jpg") repeat;
+	background:#fff url("playa-bg3.jpg") repeat;
 	background-size:cover;
 	background-attachment:fixed;
 	padding:70px 0px;
 }
 .cta-six .cta-six-content{
 	max-width:1000px;
-	border:2px solid rgba(255,255,255,0.2);
-	border-radius:8px;
+	/*border:2px solid rgba(255,255,255,0.2);*/
+	/*border-radius:8px;*/
 	padding:50px 20px 40px 20px;
 	margin:0px auto;
 	text-align:center;
-	background:rgba(0,0,0,0.1);
+	/*background:rgba(0,0,0,0.1);*/
 }
 .cta-six h4{
 	font-size:22px;
@@ -3783,6 +3783,49 @@ body.boxed.img-5 {
 		text-align:center;
 	}
 	.cta-six .btn{
+		margin-top:10px;
+	}
+}
+/* CTA Nine  */
+.cta-nine{
+	background:#fff url("redwood-bg1.jpg") repeat;
+	background-size:cover;
+	background-attachment:fixed;
+	padding:70px 0px;
+}
+.cta-nine .cta-nine-content{
+	max-width:1000px;
+	/*border:2px solid rgba(255,255,255,0.2);*/
+	/*border-radius:8px;*/
+	padding:50px 20px 40px 20px;
+	margin:0px auto;
+	text-align:center;
+	/*background:rgba(0,0,0,0.1);*/
+}
+.cta-nine h4{
+	font-size:22px;
+	font-weight:400;
+	display:inline-block;
+	color:#fff;
+}
+.cta-nine .btn{
+	background:rgba(0,0,0,0.1);
+	border:1px solid rgba(255,255,255,0.4);
+	color:#fff;
+	-webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+.cta-nine a.btn:hover{
+	background:rgba(255,255,255,0.3);
+}
+@media (max-width:991px){
+	.cta-nine .cta-three-content{
+		text-align:center;
+	}
+	.cta-nine .btn{
 		margin-top:10px;
 	}
 }
