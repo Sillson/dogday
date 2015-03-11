@@ -19,7 +19,7 @@ html,body {
 }
 
 .cta-six{
-  background:#fff image-url("playa-bg3.jpg") repeat;
+  background:#fff url(asset-path("playa-bg3.jpg")) repeat;
   background-size:cover;
   background-attachment:fixed;
   padding:70px 0px;
