@@ -58,20 +58,77 @@
             %p
               Simply enter in your birthday's, select your dog's breed size, and go fetch!
 
-    / .cta-nine
-    /   .container
-    /     .cta-nine-content
-    /       .row
-    /         .col-md-9
-    /           %h1
-    / .container
-    /   .block-heading-four
-    /     %h3
-    /       What we're trying to do
-    / .container
-    /   .row
-    /     %p
-    /       Lorem ipsum dolorem
+    .cta-nine
+      .container
+        .cta-nine-content
+          .row
+            .col-md-9
+              %h1
+    .container
+      .block-heading-four
+        %h3
+          %span What we're trying to do
+    .container
+      .divider-1
+        .block-heading-two
+          %h3
+            %span Huxley Needs Knees
+        .row
+          .col-md-4.col-sm-6
+            %p Huxley needs a knee! (Say that five times fast.) I recently found out my dog, co-pilot, and best friend Huxley has two torn cranial cruciate ligaments, which are the dog equivalent of a human ACL. Veterinary bills are going to add up, and am trying to raise money for these costly procedures.
+            %ul.list-2
+              %li A typical TTA procedure costs $4400 for one knee
+              %li The recovery time is 6 months
+              %li Over 95% of dogs go through the procedure complication free
+              %li Most dogs will regain full activity after a TTA
+              %li Neglecting surgical intervention will dramatically reduce a dog's quality of life and lifespan
+            %br/
+          .col-md-4.col-sm-6
+            %h5 Our Story
+            %p Curious to know the legend of Huxley? Read more to find out a bit about his history!
+            #accordion-alt3.panel-group.accordion-alt3
+              / Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color.
+              .panel
+                / Panel heading
+                .panel-heading
+                  %h4.panel-title
+                    %a{"data-parent" => "#accordion-alt3", "data-toggle" => "collapse", :href => "#collapseOne-alt3"}
+                      %i.fa.fa-angle-right
+                      Early Life
+                #collapseOne-alt3.panel-collapse.collapse
+                  / Panel body
+                  .panel-body
+                    Me and Huxley fortuitously crossed paths during the winter of 2010. He was six weeks old, born to a loved lab/hound mix in Oroville California. His father, a kind stray, had recently been picked up by animal control, after gaining local lore for allegedly evading the law for over two years.
+              .panel
+                .panel-heading
+                  %h4.panel-title
+                    %a{"data-parent" => "#accordion-alt3", "data-toggle" => "collapse", :href => "#collapseTwo-alt3"}
+                      %i.fa.fa-angle-right
+                      Puppy Hood
+                #collapseTwo-alt3.panel-collapse.collapse
+                  .panel-body
+                    We went through puppy-hood in Chico California, spending long days with friends hiking, swimming in Big Chico Creek, and playing music on porches.
+              .panel
+                .panel-heading
+                  %h4.panel-title
+                    %a{"data-parent" => "#accordion-alt3", "data-toggle" => "collapse", :href => "#collapseThree-alt3"}
+                      %i.fa.fa-angle-right
+                      Into Dog-Hood
+                #collapseThree-alt3.panel-collapse.collapse
+                  .panel-body
+                    In 2011 we moved to San Francisco, where Huxley swam and romped daily in the Pacific. Meanwhile, I cleaned sand out of every fabric I owned.
+              .panel
+                .panel-heading
+                  %h4.panel-title
+                    %a{"data-parent" => "#accordion-alt3", "data-toggle" => "collapse", :href => "#collapseFour-alt3"}
+                      %i.fa.fa-angle-right
+                      Huxley Heads East
+                #collapseFour-alt3.panel-collapse.collapse
+                  .panel-body
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. 
+    .row
+      %p
+        Lorem ipsum dolorem
 
     / .container
     /   #bs-carousel-2.carousel.slide{"data-interval" => "5000", "data-pause" => "hover", "data-ride" => "carousel", "data-wrap" => "true"}

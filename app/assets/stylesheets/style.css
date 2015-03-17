@@ -1744,7 +1744,7 @@ a.brown:focus {
 	width:18px;
 	height:18px;
 	margin-right:5px;
-	color:#fff;
+	color: #337ab7;
 	text-align:center;
 }
 .accordion-alt3 .panel-body{
@@ -3744,12 +3744,12 @@ body.boxed.img-5 {
 	}
 }
 /* CTA Six  */
-.cta-six{
+/*.cta-six{
 	background:#fff url('playa-bg3.jpg') repeat;
 	background-size:cover;
 	background-attachment:fixed;
-	padding:70px 0px;
-}
+	padding:100px 0px;
+}*/
 .cta-six .cta-six-content{
 	max-width:1000px;
 	/*border:2px solid rgba(255,255,255,0.2);*/
@@ -3787,12 +3787,12 @@ body.boxed.img-5 {
 	}
 }
 /* CTA Nine  */
-.cta-nine{
+/*.cta-nine{
 	background:#fff url("redwood-bg1.jpg") repeat;
 	background-size:cover;
 	background-attachment:fixed;
-	padding:70px 0px;
-}
+	padding:100px 0px;
+}*/
 .cta-nine .cta-nine-content{
 	max-width:1000px;
 	/*border:2px solid rgba(255,255,255,0.2);*/
