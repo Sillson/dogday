@@ -73,21 +73,21 @@
     /     %p
     /       Lorem ipsum dolorem
 
-    / .container
-    /   #bs-carousel-2.carousel.slide{"data-interval" => "5000", "data-pause" => "hover", "data-ride" => "carousel", "data-wrap" => "true"}
-    /     .carousel-inner
-    /       / Item, First item should have extra class "active"
-    /       .item.active
-    /         / Image
-    /         =image_tag "playa-bg3.jpg"
-    /         / Caption
-    /         .carousel-caption.c-bottom-right
-    /           / Heading
-    /           %h4
-    /             Huxley Furpaw
-    /           / Para
-    /           %p Huxley in his natural environment: enveloped in a redwood forest.
-    /   %br/
+    .container
+      #bs-carousel-2.carousel.slide{"data-interval" => "5000", "data-pause" => "hover", "data-ride" => "carousel", "data-wrap" => "true"}
+        .carousel-inner
+          / Item, First item should have extra class "active"
+          .item.active
+            / Image
+            =image_tag "playa-bg3.jpg"
+            / Caption
+            .carousel-caption.c-bottom-right
+              / Heading
+              %h4
+                Huxley Furpaw
+              / Para
+              %p Huxley in his natural environment: enveloped in a redwood forest.
+      %br/
 
 
 
