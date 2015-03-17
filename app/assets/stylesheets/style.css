@@ -3829,6 +3829,49 @@ body.boxed.img-5 {
 		margin-top:10px;
 	}
 }
+/* CTA Ten  */
+/*.cta-ten{
+	background:#fff url('desert-bg2.jpg') repeat;
+	background-size:cover;
+	background-attachment:fixed;
+	padding:100px 0px;
+}*/
+.cta-ten .cta-ten-content{
+	max-width:1000px;
+	/*border:2px solid rgba(255,255,255,0.2);*/
+	/*border-radius:8px;*/
+	padding:50px 20px 40px 20px;
+	margin:0px auto;
+	text-align:center;
+	/*background:rgba(0,0,0,0.1);*/
+}
+.cta-ten h4{
+	font-size:22px;
+	font-weight:400;
+	display:inline-block;
+	color:#fff;
+}
+.cta-ten .btn{
+	background:rgba(0,0,0,0.1);
+	border:1px solid rgba(255,255,255,0.4);
+	color:#fff;
+	-webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+.cta-ten a.btn:hover{
+	background:rgba(255,255,255,0.3);
+}
+@media (max-width:991px){
+	.cta-ten .cta-three-content{
+		text-align:center;
+	}
+	.cta-ten .btn{
+		margin-top:10px;
+	}
+}
 /* CTA Seven  */
 .cta-seven .cta-seven-content{
 	text-align:center;
