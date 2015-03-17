@@ -3744,12 +3744,12 @@ body.boxed.img-5 {
 	}
 }
 /* CTA Six  */
-.cta-six{
+/*.cta-six{
 	background:#fff url('playa-bg3.jpg') repeat;
 	background-size:cover;
 	background-attachment:fixed;
 	padding:70px 0px;
-}
+}*/
 .cta-six .cta-six-content{
 	max-width:1000px;
 	/*border:2px solid rgba(255,255,255,0.2);*/

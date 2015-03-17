@@ -32,6 +32,7 @@ DogDay::Application.configure do
 
   # Generate digests for assets URLs.
   config.assets.digest = true
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
